@@ -38,7 +38,7 @@ if len(sys.argv) == 7:
 					else:
 
 						if validationJSON.jsonvalide(monfichier):
-							import fichiersvgjson
+							import svgJSON
 						else:
 							print(validationJSON.jsonvalide(monfichier))
 
@@ -48,7 +48,7 @@ if len(sys.argv) == 7:
 					else:
 
 						if validationXML.xmlvalide(monfichier):
-							import fichiersvgxml
+							import svgXML
 						else:
 							validationXML.xmlvalide(monfichier)
 				else:
@@ -57,10 +57,10 @@ if len(sys.argv) == 7:
 
 			if typefic=='json':
 				response = requests.get(url)
-				import fichiersvgjson
+				import svgJSON
 			elif typefic=='xml':
 				response = requests.get(url)
-				import fichiersvgxml
+				import svgXML
 			else:
 				print('!!!Le type du fichier specifie est incorrect!!!')
 		else:
